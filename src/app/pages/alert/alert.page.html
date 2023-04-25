@@ -1,4 +1,9 @@
-<ion-header [translucent]="true">
+
+<app-header titulo= "alert"></app-header>
+
+<!-- igual se comenta lo primero que se creo y eso se agrega al componente , recoradadr en importartarlo
+en el modulo -->
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"
@@ -10,12 +15,22 @@
     </ion-buttons>
     <ion-title>alert</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-button (click)="presentAlert()" expand="block">
+    Alert
+  </ion-button>
+ 
+    <ion-button (click)="presentAlertMultipleButtons()" expand="block">
+      multi boton
+    </ion-button>
+    <ion-button (click)="presentAlertPrompt()" expand="block">
+     presentAlertPrompt
+    </ion-button>
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">alert</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 </ion-content>
